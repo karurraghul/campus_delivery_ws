@@ -26,9 +26,19 @@
         <kd>100</kd>
     </gazebo>
 
-    <gazebo reference="caster_wheel">
-        <mu1>0.05</mu1>
-        <mu2>0.05</mu2>
+
+
+    <gazebo reference="caster_wheel_left">
+        <mu1>0.01</mu1>
+        <mu2>0.01</mu2>
+        <kp>1000000</kp>
+        <kd>100</kd>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="caster_wheel_right">
+        <mu1>0.01</mu1>
+        <mu2>0.01</mu2>
         <kp>1000000</kp>
         <kd>100</kd>
         <material>Gazebo/Grey</material>
@@ -72,7 +82,7 @@
             <publish_odom>true</publish_odom>
             <publish_odom_tf>true</publish_odom_tf>
             <publish_wheel_tf>false</publish_wheel_tf>
-            <publish_wheel_joint_state>true</publish_wheel_joint_state>
+            <publish_wheel_joint_state>false</publish_wheel_joint_state>
 
             <!-- Legacy mode -->
             <legacy_mode>false</legacy_mode>

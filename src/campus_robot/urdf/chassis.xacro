@@ -9,34 +9,30 @@
     <link name="base_link">
 
         <visual>
-            <origin xyz="0 0 0.06"/>
+            <origin xyz="0 0 0.06" rpy="0 0 0"/>
             <geometry>
                 <box size="0.45 0.35 0.12"/>
             </geometry>
-
             <material name="blue"/>
         </visual>
 
         <collision>
-            <origin xyz="0 0 0.075"/>
+            <origin xyz="0 0 0.06" rpy="0 0 0"/> 
             <geometry>
-                <box size="0.45 0.35 0.10"/>
+                <box size="0.45 0.25 0.10"/>       
             </geometry>
         </collision>
 
         <inertial>
-            <origin xyz="0 0 0.075"/>
-
+            <origin xyz="0 0 0.06"/>
             <mass value="15"/>
-
             <inertia
-                ixx="0.12"
+                ixx="0.25"
                 ixy="0"
                 ixz="0"
                 iyy="0.40"
                 iyz="0"
-                izz="0.25"/>
-
+                izz="0.50"/>
         </inertial>
 
     </link>
@@ -97,6 +93,49 @@
 
         <origin xyz="0 0 0.12"/>
 
+    </joint>
+
+
+    <!-- ============================= -->
+    <!-- Rear Support Rod              -->
+    <!-- ============================= -->
+
+    <link name="rear_support_rod">
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.05 0.05 0.14"/>   <!-- same dimensions as sensor_tower -->
+            </geometry>
+            <material name="black"/>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.05 0.05 0.14"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.5"/>
+            <origin xyz="0 0 0"/>
+            <inertia
+                ixx="0.001"
+                ixy="0"
+                ixz="0"
+                iyy="0.001"
+                iyz="0"
+                izz="0.001"/>
+        </inertial>
+
+    </link>
+
+    <joint name="rear_support_rod_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="rear_support_rod"/>
+        <!-- sensor_tower is at x=+0.14, so mirror it to rear at x=-0.14 -->
+        <origin xyz="-0.14 0 0.19"/>
     </joint>
 
 </robot>

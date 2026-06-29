@@ -81,6 +81,14 @@ def generate_launch_description():
 
     )
 
+    joint_state_publisher = Node(
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+        name="joint_state_publisher",
+        parameters=[{"use_sim_time": True},{"rate": 100.0}],
+        output="screen",
+    )
+
     spawn_robot = TimerAction(
         period=5.0,   
         actions=[
@@ -92,7 +100,7 @@ def generate_launch_description():
                     "-entity", "campus_robot",
                     "-x", "0",
                     "-y", "0",
-                    "-z", "0.15",
+                    "-z", "0.20",
                 ],
                 output="screen",
             )
@@ -106,7 +114,7 @@ def generate_launch_description():
             gazebo,
 
             robot_state_publisher,
-
+            joint_state_publisher,
             spawn_robot,
 
         ]
