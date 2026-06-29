@@ -76,12 +76,12 @@
     </model>
     <model name='road_ew'>
       <static>1</static>
-      <pose>0 0 0.01 0 -0 0</pose>
+      <pose>0 0 0.005 0 -0 0</pose>
       <link name='link'>
         <collision name='col'>
           <geometry>
             <box>
-              <size>150 7 0.02</size>
+              <size>150 7 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -116,12 +116,12 @@
     </model>
     <model name='road_ns'>
       <static>1</static>
-      <pose>0 0 0.01 0 -0 0</pose>
+      <pose>0 0 0.005 0 -0 0</pose>
       <link name='link'>
         <collision name='col'>
           <geometry>
             <box>
-              <size>7 150 0.02</size>
+              <size>7 150 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>

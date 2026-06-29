@@ -67,7 +67,7 @@
             <wheel_diameter>0.14</wheel_diameter>
 
             <!-- Motion limits -->
-            <max_wheel_torque>10</max_wheel_torque>
+            <max_wheel_torque>20</max_wheel_torque>
             <max_wheel_acceleration>1</max_wheel_acceleration>
 
             <!-- Topics -->
