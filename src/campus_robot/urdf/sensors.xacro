@@ -238,47 +238,47 @@
     <!-- bottom z=0.14 (2mm above chassis top), top z=0.39 (below LiDAR scan at 0.42) -->
 
     <link name="lidar_post_fl">
-        <visual><geometry><box size="0.015 0.015 0.25"/></geometry><material name="black"/></visual>
-        <collision><geometry><box size="0.015 0.015 0.25"/></geometry></collision>
+        <visual><geometry><box size="0.015 0.015 0.33"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.015 0.015 0.33"/></geometry></collision>
         <inertial><mass value="0.15"/><origin xyz="0 0 0"/>
             <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.00005"/></inertial>
     </link>
     <joint name="lidar_post_fl_joint" type="fixed">
         <parent link="base_link"/><child link="lidar_post_fl"/>
-        <origin xyz="0.20 0.07 0.265"/>
+        <origin xyz="0.20 0.07 0.225"/>
     </joint>
 
      <link name="lidar_post_fr">
-        <visual><geometry><box size="0.015 0.015 0.25"/></geometry><material name="black"/></visual>
-        <collision><geometry><box size="0.015 0.015 0.25"/></geometry></collision>
+        <visual><geometry><box size="0.015 0.015 0.33"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.015 0.015 0.33"/></geometry></collision>
         <inertial><mass value="0.15"/><origin xyz="0 0 0"/>
             <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.00005"/></inertial>
     </link>
     <joint name="lidar_post_fr_joint" type="fixed">
         <parent link="base_link"/><child link="lidar_post_fr"/>
-        <origin xyz="0.20 -0.07 0.265"/>
+        <origin xyz="0.20 -0.07 0.225"/>
     </joint>
 
     <link name="lidar_post_rl">
-        <visual><geometry><box size="0.015 0.015 0.25"/></geometry><material name="black"/></visual>
-        <collision><geometry><box size="0.015 0.015 0.25"/></geometry></collision>
+        <visual><geometry><box size="0.015 0.015 0.33"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.015 0.015 0.33"/></geometry></collision>
         <inertial><mass value="0.15"/><origin xyz="0 0 0"/>
             <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.00005"/></inertial>
     </link>
     <joint name="lidar_post_rl_joint" type="fixed">
         <parent link="base_link"/><child link="lidar_post_rl"/>
-        <origin xyz="0.08 0.07 0.265"/>
+        <origin xyz="-0.17 0.07 0.225"/>
     </joint>
 
     <link name="lidar_post_rr">
-        <visual><geometry><box size="0.015 0.015 0.25"/></geometry><material name="black"/></visual>
-        <collision><geometry><box size="0.015 0.015 0.25"/></geometry></collision>
+        <visual><geometry><box size="0.015 0.015 0.33"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.015 0.015 0.33"/></geometry></collision>
         <inertial><mass value="0.15"/><origin xyz="0 0 0"/>
             <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.00005"/></inertial>
     </link>
     <joint name="lidar_post_rr_joint" type="fixed">
         <parent link="base_link"/><child link="lidar_post_rr"/>
-        <origin xyz="0.08 -0.07 0.265"/>
+        <origin xyz="-0.17 -0.07 0.225"/>
     </joint>
 
     <!-- Top plate tying all 4 posts together -->
