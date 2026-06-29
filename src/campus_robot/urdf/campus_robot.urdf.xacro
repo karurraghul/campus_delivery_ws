@@ -9,5 +9,6 @@
     <xacro:include filename="chassis.xacro"/>
     <xacro:include filename="wheels.xacro"/>
     <xacro:include filename="sensors.xacro"/>
+    <xacro:include filename="gazebo_plugins.xacro"/>
 
 </robot>
