@@ -2,16 +2,14 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <!-- ===================================================== -->
-    <!-- Base Chassis                                           -->
-    <!-- ===================================================== -->
+    <!-- ============================= -->
+    <!-- Base Chassis                  -->
+    <!-- ============================= -->
 
     <link name="base_link">
 
-        <!-- Visual -->
         <visual>
-            <origin xyz="0 0 0.06" rpy="0 0 0"/>
-
+            <origin xyz="0 0 0.06"/>
             <geometry>
                 <box size="0.45 0.35 0.12"/>
             </geometry>
@@ -19,46 +17,42 @@
             <material name="blue"/>
         </visual>
 
-        <!-- Collision -->
         <collision>
-            <origin xyz="0 0 0.06" rpy="0 0 0"/>
-
+            <origin xyz="0 0 0.06"/>
             <geometry>
                 <box size="0.45 0.35 0.12"/>
             </geometry>
         </collision>
 
-        <!-- Inertia -->
         <inertial>
+            <origin xyz="0 0 0.06"/>
 
-            <origin xyz="0 0 0.06" rpy="0 0 0"/>
-
-            <mass value="8.0"/>
+            <mass value="8"/>
 
             <inertia
-                ixx="0.120"
-                ixy="0.0"
-                ixz="0.0"
-                iyy="0.180"
-                iyz="0.0"
-                izz="0.250"/>
+                ixx="0.12"
+                ixy="0"
+                ixz="0"
+                iyy="0.18"
+                iyz="0"
+                izz="0.25"/>
 
         </inertial>
 
     </link>
 
-    <!-- ===================================================== -->
-    <!-- Parcel Box                                             -->
-    <!-- ===================================================== -->
+    <!-- ============================= -->
+    <!-- Parcel Box                    -->
+    <!-- ============================= -->
 
     <link name="parcel_box">
 
         <visual>
 
-            <origin xyz="0 0 0.17" rpy="0 0 0"/>
+            <origin xyz="0 0 0.22"/>
 
             <geometry>
-                <box size="0.25 0.20 0.10"/>
+                <box size="0.30 0.25 0.12"/>
             </geometry>
 
             <material name="grey"/>
@@ -67,33 +61,35 @@
 
         <collision>
 
-            <origin xyz="0 0 0.17" rpy="0 0 0"/>
+            <origin xyz="0 0 0.22"/>
 
             <geometry>
-                <box size="0.25 0.20 0.10"/>
+                <box size="0.30 0.25 0.12"/>
             </geometry>
 
         </collision>
 
         <inertial>
 
-            <origin xyz="0 0 0.17" rpy="0 0 0"/>
+            <origin xyz="0 0 0.22"/>
 
-            <mass value="1.0"/>
+            <mass value="1.5"/>
 
             <inertia
-                ixx="0.01"
+                ixx="0.02"
                 ixy="0"
                 ixz="0"
-                iyy="0.01"
+                iyy="0.02"
                 iyz="0"
-                izz="0.01"/>
+                izz="0.02"/>
 
         </inertial>
 
     </link>
 
-    <joint name="parcel_box_joint" type="fixed">
+    <joint
+        name="parcel_box_joint"
+        type="fixed">
 
         <parent link="base_link"/>
 
