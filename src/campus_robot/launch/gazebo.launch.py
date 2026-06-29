@@ -12,6 +12,8 @@ from launch_ros.actions import Node
 
 from launch_ros.substitutions import FindPackageShare
 
+from launch_ros.parameter_descriptions import ParameterValue 
+
 
 
 def generate_launch_description():
@@ -68,7 +70,7 @@ def generate_launch_description():
 
         parameters=[
             {
-                "robot_description": robot_description,
+                "robot_description": ParameterValue(robot_description, value_type=str),
                 "use_sim_time": True,
             }
         ],
