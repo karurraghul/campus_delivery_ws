@@ -37,15 +37,18 @@
           <surface>
             <friction>
               <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
               </ode>
               <torsional>
                 <ode/>
               </torsional>
             </friction>
             <contact>
-              <ode/>
+              <ode>
+                <kp>1000000</kp>
+                <kd>100</kd>
+              </ode>
             </contact>
             <bounce/>
           </surface>

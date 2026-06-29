@@ -112,13 +112,13 @@
     <link name="caster_wheel_left">
         <visual>
             <geometry>
-                <sphere radius="0.04"/>   <!-- bigger radius — more stable -->
+                <sphere radius="0.05"/>   <!-- bigger radius — more stable -->
             </geometry>
             <material name="grey"/>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="0.04"/>
+                <sphere radius="0.05"/>
             </geometry>
         </collision>
         <inertial>
@@ -137,7 +137,7 @@
     <joint name="caster_left_joint" type="fixed">
         <parent link="base_link"/>
         <child link="caster_wheel_left"/>
-        <origin xyz="-0.17 0.10 0.05"/>  <!-- rear, spread left -->
+        <origin xyz="-0.17 0.10 0.06"/>  <!-- rear, spread left -->
     </joint>
 
     <!-- ============================= -->
@@ -147,13 +147,13 @@
     <link name="caster_wheel_right">
         <visual>
             <geometry>
-                <sphere radius="0.04"/>
+                <sphere radius="0.05"/>
             </geometry>
             <material name="grey"/>
         </visual>
         <collision>
             <geometry>
-                <sphere radius="0.04"/>
+                <sphere radius="0.05"/>
             </geometry>
         </collision>
         <inertial>
@@ -172,7 +172,7 @@
     <joint name="caster_right_joint" type="fixed">
         <parent link="base_link"/>
         <child link="caster_wheel_right"/>
-        <origin xyz="-0.17 -0.10 0.05"/>  <!-- rear, spread right -->
+        <origin xyz="-0.17 -0.10 0.06"/>  <!-- rear, spread right -->
     </joint>
 
 </robot>
