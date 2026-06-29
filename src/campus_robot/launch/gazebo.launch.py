@@ -99,8 +99,9 @@ def generate_launch_description():
                     "-topic", "robot_description",
                     "-entity", "campus_robot",
                     "-x", "0",
-                    "-y", "0",
-                    "-z", "0.20",
+                    "-y", "-45",
+                    "-z", "0.10",
+                    "-Y","1.5708"
                 ],
                 output="screen",
             )
