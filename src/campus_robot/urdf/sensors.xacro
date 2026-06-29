@@ -133,7 +133,7 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="lidar_base_link"/>
         <child  link="lidar_link"/>
-        <origin xyz="0.0 0.0 0.03" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.03" rpy="0 -0.035 0"/>
     </joint>
 
 
@@ -232,6 +232,47 @@
 
         <origin xyz="0 0 0.09"/>
 
+    </joint>
+
+    <!-- 4-Corner LiDAR Frame: FL, FR, RL, RR posts -->
+    <!-- bottom z=0.14 (2mm above chassis top), top z=0.39 (below LiDAR scan at 0.42) -->
+
+    <link name="lidar_post_fl">
+        <visual><geometry><box size="0.015 0.015 0.25"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.015 0.015 0.25"/></geometry></collision>
+        <inertial><mass value="0.15"/><origin xyz="0 0 0"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.00005"/></inertial>
+    </link>
+    <joint name="lidar_post_fl_joint" type="fixed">
+        <parent link="base_link"/><child link="lidar_post_fl"/>
+        <origin xyz="0.20 0.07 0.265"/>
+    </joint>
+
+    <link name="lidar_post_fr">  ... same geometry ...  </link>
+    <joint name="lidar_post_fr_joint" type="fixed">
+        <origin xyz="0.20 -0.07 0.265"/>
+    </joint>
+
+    <link name="lidar_post_rl">  ... same geometry ...  </link>
+    <joint name="lidar_post_rl_joint" type="fixed">
+        <origin xyz="0.08 0.07 0.265"/>
+    </joint>
+
+    <link name="lidar_post_rr">  ... same geometry ...  </link>
+    <joint name="lidar_post_rr_joint" type="fixed">
+        <origin xyz="0.08 -0.07 0.265"/>
+    </joint>
+
+    <!-- Top plate tying all 4 posts together -->
+    <link name="lidar_top_plate">
+        <visual><geometry><box size="0.16 0.16 0.01"/></geometry><material name="black"/></visual>
+        <collision><geometry><box size="0.16 0.16 0.01"/></geometry></collision>
+        <inertial><mass value="0.1"/><origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0002"/></inertial>
+    </link>
+    <joint name="lidar_top_plate_joint" type="fixed">
+        <parent link="base_link"/><child link="lidar_top_plate"/>
+        <origin xyz="0.14 0.0 0.395"/>
     </joint>
 
 </robot>

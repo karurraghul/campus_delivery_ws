@@ -16,11 +16,28 @@ slam_toolbox:
     scan_topic: /scan
     use_map_saver: true
     mode: mapping
+    # How much to trust odometry vs scan matching
+    # Lower = trust scan more, correct odometry drift faster
+    odom_search_space: 0.02        # meters to search around odom estimate
+    theta_search_space: 0.02       # radians to search
+    fine_search_angle_offset: 0.00349   # ~0.2 deg fine search step
+
+    # Scan matching quality threshold
+    link_match_minimum_response_fine: 0.35   # reject poor matches (0.1–0.5)
+    link_scan_maximum_distance: 1.5          # max dist to associate a scan (meters)
+
+    # Loop closure
+    loop_search_maximum_distance: 3.0
+    do_loop_closing: true
+    loop_match_minimum_chain_size: 5
+    loop_match_maximum_variance_coarse: 3.0
+    loop_match_minimum_response_coarse: 0.35
+    loop_match_minimum_response_fine: 0.45
 
     # Tuning
     resolution: 0.05
     max_laser_range: 20.0
-    minimum_time_interval: 0.5
+    minimum_time_interval: 0.1
     transform_publish_period: 0.02
-    map_update_interval: 5.0
+    map_update_interval: 2.0
     use_sim_time: true
