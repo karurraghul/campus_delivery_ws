@@ -13,15 +13,25 @@
     </gazebo>
 
     <gazebo reference="left_wheel">
-        <material>Gazebo/Black</material>
-        <mu1>5.0</mu1>
-        <mu2>5.0</mu2>
+        <mu1>20</mu1>
+        <mu2>20</mu2>
+        <kp>1000000</kp>
+        <kd>100</kd>
     </gazebo>
 
     <gazebo reference="right_wheel">
-        <material>Gazebo/Black</material>
-        <mu1>5.0</mu1>
-        <mu2>5.0</mu2>
+        <mu1>20</mu1>
+        <mu2>20</mu2>
+        <kp>1000000</kp>
+        <kd>100</kd>
+    </gazebo>
+
+    <gazebo reference="caster_wheel">
+        <mu1>0.05</mu1>
+        <mu2>0.05</mu2>
+        <kp>1000000</kp>
+        <kd>100</kd>
+        <material>Gazebo/Grey</material>
     </gazebo>
 
     <!-- ========================================================= -->
@@ -47,8 +57,8 @@
             <wheel_diameter>0.14</wheel_diameter>
 
             <!-- Motion limits -->
-            <max_wheel_torque>30</max_wheel_torque>
-            <max_wheel_acceleration>8.0</max_wheel_acceleration>
+            <max_wheel_torque>10</max_wheel_torque>
+            <max_wheel_acceleration>1</max_wheel_acceleration>
 
             <!-- Topics -->
             <command_topic>cmd_vel</command_topic>
@@ -62,6 +72,7 @@
             <publish_odom>true</publish_odom>
             <publish_odom_tf>true</publish_odom_tf>
             <publish_wheel_tf>false</publish_wheel_tf>
+            <publish_wheel_joint_state>true</publish_wheel_joint_state>
 
             <!-- Legacy mode -->
             <legacy_mode>false</legacy_mode>

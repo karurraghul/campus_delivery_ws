@@ -14,6 +14,8 @@ from launch_ros.substitutions import FindPackageShare
 
 from launch_ros.parameter_descriptions import ParameterValue 
 
+from launch.actions import TimerAction 
+
 
 
 def generate_launch_description():
@@ -79,31 +81,22 @@ def generate_launch_description():
 
     )
 
-    spawn_robot = Node(
-
-        package="gazebo_ros",
-
-        executable="spawn_entity.py",
-
-        arguments=[
-            "-topic",
-            "robot_description",
-
-            "-entity",
-            "campus_robot",
-
-            "-x",
-            "0",
-
-            "-y",
-            "0",
-
-            "-z",
-            "0.10",
-        ],
-
-        output="screen",
-
+    spawn_robot = TimerAction(
+        period=5.0,   
+        actions=[
+            Node(
+                package="gazebo_ros",
+                executable="spawn_entity.py",
+                arguments=[
+                    "-topic", "robot_description",
+                    "-entity", "campus_robot",
+                    "-x", "0",
+                    "-y", "0",
+                    "-z", "0.15",
+                ],
+                output="screen",
+            )
+        ]
     )
 
     return LaunchDescription(
