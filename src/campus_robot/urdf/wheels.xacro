@@ -196,7 +196,7 @@
     <joint name="caster_front_left_joint" type="fixed">
         <parent link="base_link"/>
         <child link="caster_front_left"/>
-        <origin xyz="0.17 0.10 0.06"/>
+        <origin xyz="0.22 0.10 0.06"/>
     </joint>
 
     <!-- Front Caster Right -->
@@ -219,7 +219,7 @@
     <joint name="caster_front_right_joint" type="fixed">
         <parent link="base_link"/>
         <child link="caster_front_right"/>
-        <origin xyz="0.17 -0.10 0.06"/>
+        <origin xyz="0.22 -0.10 0.06"/>
     </joint>
 
 </robot>

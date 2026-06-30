@@ -138,4 +138,45 @@
         <origin xyz="-0.14 0 0.19"/>
     </joint>
 
+    <!-- ============================= -->
+    <!-- Battery Pack                  -->
+    <!-- Front section, low mount      -->
+    <!-- Shifts CoM forward to resist  -->
+    <!-- backward tipping on accel     -->
+    <!-- ============================= -->
+
+    <link name="battery_pack">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.18 0.28 0.05"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.18 0.28 0.05"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="3.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia
+                ixx="0.010"
+                ixy="0"
+                ixz="0"
+                iyy="0.008"
+                iyz="0"
+                izz="0.016"/>
+        </inertial>
+    </link>
+
+    <joint name="battery_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="battery_pack"/>
+        <!-- front section of chassis, sitting on floor -->
+        <origin xyz="0.10 0 0.045"/>
+    </joint>
+
 </robot>
