@@ -16,27 +16,55 @@ slam_toolbox:
     scan_topic: /scan
     use_map_saver: true
     mode: mapping
-    # How much to trust odometry vs scan matching
-    # Lower = trust scan more, correct odometry drift faster
-    odom_search_space: 0.02        # meters to search around odom estimate
-    theta_search_space: 0.02       # radians to search
     fine_search_angle_offset: 0.00349   # ~0.2 deg fine search step
 
     # Scan matching quality threshold
-    link_match_minimum_response_fine: 0.35   # reject poor matches (0.1–0.5)
+    # Relaxed from 0.35 (3.5x stricter than slam_toolbox's 0.1 default) so
+    # weak-but-real matches against sparse mid-field landmarks (lone tree
+    # trunks, distant building edges) aren't discarded in the open lawn
+    # between campus_v2.world's buildings, which sit ~70-110m apart --
+    # well beyond the LiDAR's 20m max_laser_range.
+    link_match_minimum_response_fine: 0.15   # reject poor matches (0.1–0.5)
     link_scan_maximum_distance: 1.5          # max dist to associate a scan (meters)
 
+    # Correlation (local scan-matcher) search window -- widened from the
+    # 0.5/0.1 defaults so the matcher can re-acquire alignment after longer
+    # stretches of uncorrected odometry drift between the 20m-spaced tree
+    # landmarks / 70m-spaced buildings.
+    correlation_search_space_dimension: 0.8
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.15
+
     # Loop closure
-    loop_search_maximum_distance: 3.0
+    # loop_search_maximum_distance/loop_search_space_dimension widened
+    # (from 3.0/default 8.0) since accumulated drift between buildings
+    # 70-110m apart can exceed the tighter defaults before a loop closure
+    # is attempted.
+    loop_search_maximum_distance: 6.0
     do_loop_closing: true
     loop_match_minimum_chain_size: 5
     loop_match_maximum_variance_coarse: 3.0
     loop_match_minimum_response_coarse: 0.35
     loop_match_minimum_response_fine: 0.45
+    loop_search_space_dimension: 12.0
+
+    # Keep buffered historical scans available across the LiDAR's full
+    # max_laser_range (20.0) instead of the 10.0 default.
+    scan_buffer_maximum_scan_distance: 20.0
+
+    # Denser pose-graph nodes through the open lawn (defaults 0.5/0.5)
+    # increase the odds of catching a usable match before drift compounds.
+    minimum_travel_distance: 0.3
+    minimum_travel_heading: 0.25
+
+    # Trust scan matches a bit more relative to odometry when a match is
+    # found (default 0.5), appropriate for this sparse-landmark environment.
+    distance_variance_penalty: 0.3
 
     # Tuning
     resolution: 0.05
-    max_laser_range: 20.0
+    min_laser_range: 0.25   # mirrors gazebo_plugins.xacro LiDAR <range><min>
+    max_laser_range: 20.0   # mirrors gazebo_plugins.xacro LiDAR <range><max>
     minimum_time_interval: 0.1
     transform_publish_period: 0.02
     map_update_interval: 2.0
