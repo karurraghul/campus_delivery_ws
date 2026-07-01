@@ -41,6 +41,10 @@ data_files=[
         os.path.join('share', package_name, 'meshes'),
         glob('meshes/*')
     ),
+    (
+        os.path.join('share', package_name, 'maps'),
+        glob('maps/*')
+    ),
 ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -55,6 +59,7 @@ data_files=[
     },
     entry_points={
         'console_scripts': [
+            'vision_obstacle_node = campus_robot.vision_obstacle_node:main',
         ],
     },
 )
