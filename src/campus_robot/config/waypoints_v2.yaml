@@ -1,9 +1,12 @@
 # Campus Delivery Waypoints — v2 (67.5x67.5m campus, scaled 0.45x from original 150x150m)
 # Coordinates match waypoint markers in campus_v2.world
 # Robot spawns at: Main Gate (0, -24.75), facing north (yaw=1.5708)
-# Building positions use a uniform 5m edge clearance from roads/neighbors (see
-# "Redesign Campus Buildings" plan) — each waypoint sits ~1m off its building's
-# near edge, facing the building.
+# Building positions maintain >=4m clearance from roads and >=6m edge-to-edge
+# clearance between buildings, computed from each mesh's real (inch-corrected)
+# bounding box — each waypoint sits ~1m off its building's near edge, facing
+# the building. medical_center is a custom primitive-box building (not a mesh)
+# sized and placed to avoid straddling road_ns, which runs the full 67.5m
+# length through the campus center.
 
 waypoints:
   main_gate:
@@ -14,14 +17,14 @@ waypoints:
     description: "Main Gate — robot spawn/home point"
 
   library:
-    x: -12.73
+    x: -16.0
     y: 7.5
     z: 0.0
     yaw: 0.0
     description: "Library Block (school model) — NW"
 
   admin_block:
-    x: 13.71
+    x: 13.5
     y: 7.5
     z: 0.0
     yaw: 3.1416
@@ -42,8 +45,8 @@ waypoints:
     description: "Hostel (apartment model, 0.65x scale) — SE"
 
   medical_center:
-    x: 0.0
-    y: 28.43
+    x: 13.5
+    y: 22.7
     z: 0.0
     yaw: 3.1416
-    description: "Medical Center (fire_station model) — North"
+    description: "Medical Center (custom clinic building, white with red cross) — just north of Admin Block"
