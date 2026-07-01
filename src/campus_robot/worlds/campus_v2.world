@@ -81,7 +81,7 @@
         <collision name='col'>
           <geometry>
             <box>
-              <size>150 7 0.004</size>
+              <size>67.5 7 0.004</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -104,7 +104,7 @@
         <visual name='vis'>
           <geometry>
             <box>
-              <size>150 7 0.004</size>
+              <size>67.5 7 0.004</size>
             </box>
           </geometry>
           <material>
@@ -124,7 +124,7 @@
         <collision name='col'>
           <geometry>
             <box>
-              <size>7 150 0.004</size>
+              <size>7 67.5 0.004</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -147,7 +147,7 @@
         <visual name='vis'>
           <geometry>
             <box>
-              <size>7 150 0.004</size>
+              <size>7 67.5 0.004</size>
             </box>
           </geometry>
           <material>
@@ -162,7 +162,7 @@
     </model>
     <model name='dash_ew_1'>
       <static>1</static>
-      <pose>-50 0 0.02 0 -0 0</pose>
+      <pose>-22.5 0 0.02 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -200,7 +200,7 @@
     </model>
     <model name='dash_ew_3'>
       <static>1</static>
-      <pose>50 0 0.02 0 -0 0</pose>
+      <pose>22.5 0 0.02 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -219,7 +219,7 @@
     </model>
     <model name='dash_ns_1'>
       <static>1</static>
-      <pose>0 -50 0.02 0 -0 1.5708</pose>
+      <pose>0 -22.5 0.02 0 -0 1.5708</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -238,7 +238,7 @@
     </model>
     <model name='dash_ns_2'>
       <static>1</static>
-      <pose>0 50 0.02 0 -0 1.5708</pose>
+      <pose>0 22.5 0.02 0 -0 1.5708</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -289,7 +289,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-35 35 0 0 -0 1.5708</pose>
+      <pose>-15.75 15.75 0 0 -0 1.5708</pose>
     </model>
     <model name='admin_block'>
       <static>1</static>
@@ -338,7 +338,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>35 35 0 0 -0 -3.14159</pose>
+      <pose>15.75 15.75 0 0 -0 -3.14159</pose>
     </model>
     <model name='canteen'>
       <static>1</static>
@@ -386,7 +386,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-35 -35 0 0 -0 0</pose>
+      <pose>-15.75 -15.75 0 0 -0 0</pose>
     </model>
     <model name='hostel'>
       <static>1</static>
@@ -435,7 +435,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>35 -35 0 0 -0 1.5708</pose>
+      <pose>15.75 -15.75 0 0 -0 1.5708</pose>
     </model>
     <model name='medical_center'>
       <static>1</static>
@@ -745,7 +745,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0 55 0 0 -0 -3.14159</pose>
+      <pose>0 24.75 0 0 -0 -3.14159</pose>
     </model>
     <model name='ambulance_parked'>
       <static>1</static>
@@ -783,11 +783,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10 45 0 0 -0 1.5708</pose>
+      <pose>4.5 20.25 0 0 -0 1.5708</pose>
     </model>
     <model name='gate_pillar_L'>
       <static>1</static>
-      <pose>-5 -58 2 0 -0 0</pose>
+      <pose>-2.25 -26.1 2 0 -0 0</pose>
       <link name='link'>
         <collision name='col'>
           <geometry>
@@ -827,7 +827,7 @@
     </model>
     <model name='gate_pillar_R'>
       <static>1</static>
-      <pose>5 -58 2 0 -0 0</pose>
+      <pose>2.25 -26.1 2 0 -0 0</pose>
       <link name='link'>
         <collision name='col'>
           <geometry>
@@ -867,7 +867,7 @@
     </model>
     <model name='gate_arch'>
       <static>1</static>
-      <pose>0 -58 4.25 0 -0 0</pose>
+      <pose>0 -26.1 4.25 0 -0 0</pose>
       <link name='link'>
         <collision name='col'>
           <geometry>
@@ -966,7 +966,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10 30 0 0 -0 0</pose>
+      <pose>-4.5 13.5 0 0 -0 0</pose>
     </model>
     <model name='pine_2'>
       <static>1</static>
@@ -1029,7 +1029,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10 10 0 0 -0 0</pose>
+      <pose>-4.5 4.5 0 0 -0 0</pose>
     </model>
     <model name='pine_3'>
       <static>1</static>
@@ -1092,7 +1092,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10 -10 0 0 -0 0</pose>
+      <pose>-4.5 -4.5 0 0 -0 0</pose>
     </model>
     <model name='pine_4'>
       <static>1</static>
@@ -1155,7 +1155,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-10 -30 0 0 -0 0</pose>
+      <pose>-4.5 -13.5 0 0 -0 0</pose>
     </model>
     <model name='oak_1'>
       <static>1</static>
@@ -1218,7 +1218,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10 30 0 0 -0 0</pose>
+      <pose>6.2 13.5 0 0 -0 0</pose>
     </model>
     <model name='oak_2'>
       <static>1</static>
@@ -1281,7 +1281,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10 10 0 0 -0 0</pose>
+      <pose>6.2 4.5 0 0 -0 0</pose>
     </model>
     <model name='oak_3'>
       <static>1</static>
@@ -1344,7 +1344,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10 -10 0 0 -0 0</pose>
+      <pose>6.2 -4.5 0 0 -0 0</pose>
     </model>
     <model name='oak_4'>
       <static>1</static>
@@ -1407,7 +1407,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>10 -30 0 0 -0 0</pose>
+      <pose>6.2 -13.5 0 0 -0 0</pose>
     </model>
     <model name='pine_c1'>
       <static>1</static>
@@ -1470,7 +1470,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-55 55 0 0 -0 0</pose>
+      <pose>-24.75 24.75 0 0 -0 0</pose>
     </model>
     <model name='pine_c2'>
       <static>1</static>
@@ -1533,7 +1533,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>55 55 0 0 -0 0</pose>
+      <pose>24.75 24.75 0 0 -0 0</pose>
     </model>
     <model name='oak_c1'>
       <static>1</static>
@@ -1596,7 +1596,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-55 -55 0 0 -0 0</pose>
+      <pose>-24.75 -24.75 0 0 -0 0</pose>
     </model>
     <model name='oak_c2'>
       <static>1</static>
@@ -1659,11 +1659,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>55 -55 0 0 -0 0</pose>
+      <pose>24.75 -24.75 0 0 -0 0</pose>
     </model>
     <model name='wp_library'>
       <static>1</static>
-      <pose>-35 28 0.05 0 -0 0</pose>
+      <pose>-15.75 12.6 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1684,7 +1684,7 @@
     </model>
     <model name='wp_admin'>
       <static>1</static>
-      <pose>35 28 0.05 0 -0 0</pose>
+      <pose>15.75 12.6 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1705,7 +1705,7 @@
     </model>
     <model name='wp_canteen'>
       <static>1</static>
-      <pose>-35 -28 0.05 0 -0 0</pose>
+      <pose>-15.75 -12.6 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1726,7 +1726,7 @@
     </model>
     <model name='wp_hostel'>
       <static>1</static>
-      <pose>35 -28 0.05 0 -0 0</pose>
+      <pose>15.75 -12.6 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1747,7 +1747,7 @@
     </model>
     <model name='wp_medical'>
       <static>1</static>
-      <pose>0 42 0.05 0 -0 0</pose>
+      <pose>0 18.9 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1768,7 +1768,7 @@
     </model>
     <model name='wp_gate'>
       <static>1</static>
-      <pose>0 -55 0.05 0 -0 0</pose>
+      <pose>0 -24.75 0.05 0 -0 0</pose>
       <link name='link'>
         <visual name='v'>
           <geometry>
@@ -1874,7 +1874,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-22.2906 -24.916 0 0 -0 0</pose>
+      <pose>-10.0308 -11.2122 0 0 -0 0</pose>
     </model>
     <model name='person_standing'>
       <link name='link'>
@@ -1944,390 +1944,11 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-21.0425 23.0403 0 0 -0 0</pose>
+      <pose>-9.4691 10.3681 0 0 -0 0</pose>
     </model>
-    <state world_name='campus_world'>
-      <sim_time>211 291000000</sim_time>
-      <real_time>212 91929357</real_time>
-      <wall_time>1782710455 876125813</wall_time>
-      <iterations>211291</iterations>
-      <model name='admin_block'>
-        <pose>35 35 0 0 -0 -3.14159</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>35 35 0 0 -0 -3.14159</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ambulance_parked'>
-        <pose>10 45 0 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>10 45 0 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='canteen'>
-        <pose>-35 -35 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-35 -35 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='dash_ew_1'>
-        <pose>-50 0 0.02 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-50 0 0.02 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='dash_ew_2'>
-        <pose>0 0 0.02 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0.02 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='dash_ew_3'>
-        <pose>50 0 0.02 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>50 0 0.02 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='dash_ns_1'>
-        <pose>0 -50 0.02 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 -50 0.02 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='dash_ns_2'>
-        <pose>0 50 0.02 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 50 0.02 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='gate_arch'>
-        <pose>0 -58 4.25 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 -58 4.25 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='gate_pillar_L'>
-        <pose>-5 -58 2 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-5 -58 2 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='gate_pillar_R'>
-        <pose>5 -58 2 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>5 -58 2 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='hostel'>
-        <pose>35 -35 0 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>35 -35 0 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='library_block'>
-        <pose>-35 35 0 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-35 35 0 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='medical_center'>
-        <pose>0 55 0 0 -0 -3.14159</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 55 0 0 -0 -3.14159</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_1'>
-        <pose>10 30 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>10 30 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_2'>
-        <pose>10 10 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>10 10 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_3'>
-        <pose>10 -10 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>10 -10 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_4'>
-        <pose>10 -30 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>10 -30 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_c1'>
-        <pose>-31.4946 -14.1078 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-31.4946 -14.1078 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='oak_c2'>
-        <pose>45.4995 -12.3963 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>45.4995 -12.3963 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='person_standing'>
-        <pose>-21.0425 23.0403 -1e-06 -1e-06 1e-06 -0.000129</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-21.0425 23.0403 -1e-06 -1e-06 1e-06 -0.000129</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.61393 1.13506 -1.49377 1.93575 1.4517 3.09627</acceleration>
-          <wrench>129.114 90.8047 -119.502 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='person_walking'>
-        <pose>-22.2906 -24.916 0 -1e-06 -1e-06 9e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-22.2906 -24.916 0 -1e-06 -1e-06 9e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.65861 -3.58851 2.69847 0.532882 1.17509 -3.03612</acceleration>
-          <wrench>132.688 -287.081 215.878 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_1'>
-        <pose>-10 30 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-10 30 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_2'>
-        <pose>-10 10 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-10 10 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_3'>
-        <pose>-10 -10 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-10 -10 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_4'>
-        <pose>-10 -30 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-10 -30 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_c1'>
-        <pose>-55 55 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-55 55 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pine_c2'>
-        <pose>47.5465 13.4503 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>47.5465 13.4503 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='road_ew'>
-        <pose>0 0 0.01 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0.01 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='road_ns'>
-        <pose>0 0 0.01 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 0 0.01 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_admin'>
-        <pose>35 28 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>35 28 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_canteen'>
-        <pose>-35 -28 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-35 -28 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_gate'>
-        <pose>0 -55 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 -55 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_hostel'>
-        <pose>35 -28 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>35 -28 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_library'>
-        <pose>-35 28 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>-35 28 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wp_medical'>
-        <pose>0 42 0.05 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0 42 0.05 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>70.2669 -19.7715 29.0636 -0 0.362786 2.79991</pose>
+        <pose>31.82 -8.9 13.08 -0 0.362786 2.79991</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
