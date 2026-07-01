@@ -33,7 +33,7 @@ slam_toolbox:
     # landmarks / 70m-spaced buildings.
     correlation_search_space_dimension: 0.8
     correlation_search_space_resolution: 0.01
-    correlation_search_space_smear_deviation: 0.15
+    correlation_search_space_smear_deviation: 0.08
 
     # Loop closure
     # loop_search_maximum_distance/loop_search_space_dimension widened
