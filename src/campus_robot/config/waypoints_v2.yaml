@@ -1,6 +1,9 @@
 # Campus Delivery Waypoints — v2 (67.5x67.5m campus, scaled 0.45x from original 150x150m)
 # Coordinates match waypoint markers in campus_v2.world
 # Robot spawns at: Main Gate (0, -24.75), facing north (yaw=1.5708)
+# Building positions use a uniform 5m edge clearance from roads/neighbors (see
+# "Redesign Campus Buildings" plan) — each waypoint sits ~1m off its building's
+# near edge, facing the building.
 
 waypoints:
   main_gate:
@@ -11,36 +14,36 @@ waypoints:
     description: "Main Gate — robot spawn/home point"
 
   library:
-    x: -15.75
-    y: 12.6
+    x: -12.73
+    y: 7.5
     z: 0.0
     yaw: 0.0
-    description: "Library Block (apartment model) — NW"
+    description: "Library Block (school model) — NW"
 
   admin_block:
-    x: 15.75
-    y: 12.6
+    x: 13.71
+    y: 7.5
     z: 0.0
     yaw: 3.1416
-    description: "Admin Block (house_2 model) — NE"
+    description: "Admin Block (post_office model) — NE"
 
   canteen:
-    x: -15.75
-    y: -12.6
+    x: -12.69
+    y: -7.5
     z: 0.0
     yaw: 0.0
-    description: "Canteen (house_1 model) — SW"
+    description: "Canteen (fast_food model) — SW"
 
   hostel:
-    x: 15.75
-    y: -12.6
+    x: 15.74
+    y: -7.5
     z: 0.0
     yaw: 3.1416
-    description: "Hostel (house_3 model) — SE"
+    description: "Hostel (apartment model, 0.65x scale) — SE"
 
   medical_center:
     x: 0.0
-    y: 18.9
+    y: 28.43
     z: 0.0
     yaw: 3.1416
     description: "Medical Center (fire_station model) — North"
