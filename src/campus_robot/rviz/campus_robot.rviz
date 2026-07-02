@@ -111,10 +111,10 @@ Visualization Manager:
     - Alpha: 1
       Buffer Length: 1
       Class: rviz_default_plugins/Path
-      Color: 78; 154; 6
+      Color: 255; 255; 0
       Enabled: true
-      Line Style: Lines
-      Line Width: 0.03
+      Line Style: Billboards
+      Line Width: 0.2
       Name: GlobalPlan
       Offset:
         X: 0

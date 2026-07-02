@@ -187,19 +187,26 @@ local_costmap:
       robot_base_frame: base_link
       use_sim_time: True
       rolling_window: true
-      width: 3
-      height: 3
+      # Widened from 3x3 so the full inflation footprint of a nearby oak
+      # tree (see inflation_radius note below) fits inside the window.
+      width: 6
+      height: 6
       resolution: 0.05
       robot_radius: 0.3
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        # Lower scaling factor + larger radius = costs stay higher further
-        # from a marked obstacle, giving DWB's BaseObstacle critic a wider,
-        # stronger repulsive gradient to react to before getting close
-        # (e.g. tree trunks/canopies marked by the camera_obstacles layer).
-        cost_scaling_factor: 2.5
-        inflation_radius: 0.65
+        # oak_tree.dae has a large buttressed root flare: mesh analysis
+        # (inch-corrected) shows radius ~1.0-1.2m at the 2D LiDAR's scan
+        # height (0.37m, where it actually gets marked as an obstacle) but
+        # ballooning to ~2.0m radius right at ground level, below the
+        # LiDAR's plane and easy to miss. A tighter inflation_radius left a
+        # low/zero-cost gap between the sensed trunk edge and the true root
+        # edge, so paths cut through solid mesh the sensors never marked.
+        # 1.2m of inflation on top of the ~1.2m sensed radius keeps
+        # meaningful cost out past the ~2.0m true flare edge with margin.
+        cost_scaling_factor: 2.0
+        inflation_radius: 1.2
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -278,11 +285,12 @@ global_costmap:
         map_subscribe_transient_local: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        # Kept in sync with local_costmap's inflation_layer so the global
-        # planner and local controller agree on how wide a berth to give
-        # obstacles.
-        cost_scaling_factor: 2.5
-        inflation_radius: 0.65
+        # Kept in sync with local_costmap's inflation_layer (see its comment
+        # for the oak_tree root-flare measurements that motivated these
+        # values) so the global planner and local controller agree on how
+        # wide a berth to give obstacles.
+        cost_scaling_factor: 2.0
+        inflation_radius: 1.2
       always_send_full_costmap: True
 
 map_server:
