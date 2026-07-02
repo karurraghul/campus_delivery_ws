@@ -156,7 +156,13 @@ controller_server:
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-      BaseObstacle.scale: 0.02
+      # Raised from 0.02: at the old weight, trajectories that merely brushed
+      # inflated (non-lethal) cost around a vision-marked obstacle (e.g. a
+      # tree) were barely penalized relative to PathAlign/PathDist/GoalAlign,
+      # so the controller preferred cutting close to the path over standing
+      # off from the obstacle. 0.3 gives obstacle proximity real influence
+      # while still letting path-following dominate in open space.
+      BaseObstacle.scale: 0.3
       PathAlign.scale: 32.0
       PathAlign.forward_point_distance: 0.1
       GoalAlign.scale: 24.0
@@ -188,8 +194,12 @@ local_costmap:
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        # Lower scaling factor + larger radius = costs stay higher further
+        # from a marked obstacle, giving DWB's BaseObstacle critic a wider,
+        # stronger repulsive gradient to react to before getting close
+        # (e.g. tree trunks/canopies marked by the camera_obstacles layer).
+        cost_scaling_factor: 2.5
+        inflation_radius: 0.65
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -268,8 +278,11 @@ global_costmap:
         map_subscribe_transient_local: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        # Kept in sync with local_costmap's inflation_layer so the global
+        # planner and local controller agree on how wide a berth to give
+        # obstacles.
+        cost_scaling_factor: 2.5
+        inflation_radius: 0.65
       always_send_full_costmap: True
 
 map_server:

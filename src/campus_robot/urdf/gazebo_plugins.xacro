@@ -271,12 +271,18 @@
                 name="camera_plugin"
                 filename="libgazebo_ros_camera.so">
 
-                <!-- Fixed name/frame so ROS topics are deterministic:
+                <!-- Fixed name so ROS topics are deterministic:
                      /camera_link/image_raw, /camera_link/depth/image_raw,
                      /camera_link/depth/camera_info, /camera_link/points -->
                 <camera_name>camera_link</camera_name>
 
-                <frame_name>camera_link</frame_name>
+                <!-- The plugin generates depth/point-cloud data in OPTICAL
+                     convention (Z forward, X right, Y down), so the frame_id
+                     it stamps on messages must be the optical child frame
+                     (see sensors.xacro), not the physical camera_link
+                     (X-forward, Z-up). Using the wrong frame here silently
+                     misplaces every vision-based obstacle in the costmap. -->
+                <frame_name>camera_link_optical</frame_name>
 
                 <min_depth>0.1</min_depth>
 
