@@ -20,9 +20,14 @@ waypoints:
 
   library:
     x: -16.0
-    y: 7.5
+    y: 6.37
     z: 0.0
     yaw: 0.0
+    # y was 7.5 — only 0.13m from the school mesh's real near wall (world
+    # y=7.37, from its inch-corrected, off-center-origin bounding box), well
+    # inside robot_radius + inflation_radius, so NavigateToPose rejected the
+    # goal as in-collision and FollowWaypoints silently skipped to the next
+    # stop. 6.37 restores the intended ~1m standoff from the true wall edge.
     description: "Library Block (school model) — NW"
 
   admin_block:
