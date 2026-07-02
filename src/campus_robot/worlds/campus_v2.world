@@ -1566,6 +1566,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='person_walking'>
+      <static>1</static>
       <link name='link'>
         <inertial>
           <pose>0 0 0.95 0 -0 0</pose>
@@ -1636,6 +1637,7 @@
       <pose>-10.0308 -11.2122 0 0 -0 0</pose>
     </model>
     <model name='person_standing'>
+     <static>1</static>
       <link name='link'>
         <inertial>
           <pose>0 -0.1 0.95 0 -0 0</pose>
