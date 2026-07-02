@@ -60,6 +60,7 @@ data_files=[
     entry_points={
         'console_scripts': [
             'vision_obstacle_node = campus_robot.vision_obstacle_node:main',
+            'waypoint_nav_node = campus_robot.waypoint_nav_node:main',
         ],
     },
 )

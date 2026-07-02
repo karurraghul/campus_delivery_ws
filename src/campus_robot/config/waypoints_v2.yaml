@@ -1,6 +1,8 @@
 # Campus Delivery Waypoints — v2 (67.5x67.5m campus, scaled 0.45x from original 150x150m)
 # Coordinates match waypoint markers in campus_v2.world
-# Robot spawns at: Main Gate (0, -24.75), facing north (yaw=1.5708)
+# Robot spawns at: Main Gate (0, -20.25), facing north (yaw=1.5708) — this MUST
+# match the spawn_entity -x/-y/-Y arguments in launch/gazebo.launch.py, since
+# waypoint_nav_node.py reads main_gate here to auto-set AMCL's initial pose.
 # Building positions maintain >=4m clearance from roads and >=6m edge-to-edge
 # clearance between buildings, computed from each mesh's real (inch-corrected)
 # bounding box — each waypoint sits ~1m off its building's near edge, facing
@@ -11,7 +13,7 @@
 waypoints:
   main_gate:
     x: 0.0
-    y: -24.75
+    y: -20.25
     z: 0.0
     yaw: 1.5708
     description: "Main Gate — robot spawn/home point"
